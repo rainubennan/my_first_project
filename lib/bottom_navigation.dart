@@ -29,24 +29,31 @@ class _Bottom_BarState extends State<Bottom_Bar> {
   return Scaffold(
     appBar: AppBar(title:Text("BottomBar"),
     ),
-    bottomNavigationBar: BottomNavigationBar(
-      type: BottomNavigationBarType.shifting,
-      backgroundColor: Colors.blue,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.blue,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home), label: "Home",backgroundColor:Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search), label: "Search",backgroundColor:Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border), label: "Activities",backgroundColor:Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), label: "Profile",backgroundColor:Colors.black),
-        ],
-      currentIndex: selectindex,
-      onTap: onitemtapped,
-      ),
+    bottomNavigationBar: Container(
+      child:ClipRRect(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(50),
+          topLeft: Radius.circular(50)),
+      child: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        backgroundColor: Colors.blue,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.blue,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home), label: "Home",backgroundColor:Colors.black),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.search), label: "Search",backgroundColor:Colors.black),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite_border), label: "Activities",backgroundColor:Colors.black),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle), label: "Profile",backgroundColor:Colors.black),
+          ],
+        currentIndex: selectindex,
+        onTap: onitemtapped,
+        ),
+    ),
+    ),
       body: Center(
          child: body.elementAt(selectindex),
         // child: Card(
