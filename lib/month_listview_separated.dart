@@ -13,19 +13,22 @@ class Month_Listview extends StatelessWidget{
    return Scaffold(
      appBar: AppBar(),
    body: ListView.separated(itemBuilder: (context, index){
-     return Card(
-     child: Padding(
-       padding: const EdgeInsets.all(8.0),
+     return Container(
+       height: 40,
+       color: Colors.white,
        child: Text(month[index]),
-     ),);
-    }, separatorBuilder: ( context, int index) {
-     return const Card(
-         color:Colors.red,
+     );
+    }, separatorBuilder: ( context, int index,) {
+     if(index%5==0) {
+       return Container(
+         color: Colors.red,
          child:
-          Text("Advertisement",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
-    );
-
-    }, itemCount: month.length,
+         Text("Advertisement",
+           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+       );
+     }
+     return Divider(color: Colors.white);
+    }, itemCount:month.length,
    ),);
   }
 
