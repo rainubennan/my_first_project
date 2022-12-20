@@ -29,9 +29,8 @@ class Stack_Demo extends StatelessWidget{
            ),
          ),
          Positioned(
-         top:30,
+
            bottom: 50,
-           left: 50,
            right: 50,
            child: Container(
              width:10,

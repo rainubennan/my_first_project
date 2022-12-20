@@ -19,8 +19,8 @@ class Grid_Custom extends StatelessWidget{
             childrenDelegate: SliverChildBuilderDelegate(
                     (BuildContext, index) {
                   return Image.asset(image[index],
-                      width:10,
-                      height:10,
+                      width:5,
+                      height:5,
                       fit:BoxFit.fill,);
                   },
               childCount: 5,

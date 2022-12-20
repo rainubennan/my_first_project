@@ -50,23 +50,13 @@ class Loginvalidation extends StatelessWidget{
            child: TextFormField(
              obscuringCharacter: "*",
              decoration:  const InputDecoration(
-
+               prefixIcon: Icon(Icons.password),
                labelText: "Password",
 
-  //                  suffixIcon:IconButton(
-  //            onPressed: (){setState((){
-  //     if(viewenable) {
-  //       viewenable = false;
-  //     } else{
-  //       viewenable=true;
-  //     }
-  //   });
-  //              Icon(viewenable == true? Icons.visibility_off :Icons.visibility);}),)
-  //
-  // prefixIcon: const Icon(Icons.password),
-  // label:const Text("Password"),
+
                border: OutlineInputBorder(
                  borderRadius: BorderRadius.all(Radius.circular(20)),)),
+
 
              validator:(password){
                if(password==null || password.length<6 || password.isEmpty){

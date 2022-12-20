@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool viewenable=true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +42,8 @@ class _HomePageState extends State<HomePage> {
                     label: Text("Username"),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
-                    )),
+                    )
+                ),
               ),
             ),
         Padding(
@@ -60,10 +62,18 @@ class _HomePageState extends State<HomePage> {
       });
     }, icon: Icon(viewenable== true? Icons.visibility_off: Icons.visibility)),
     prefixIcon: const Icon(Icons.password),
-        label: Text("Password"),
-    border: OutlineInputBorder(
+        label: const Text("Password"),
+    border: const OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(20)),
     )),
+      // validator:(password){
+      //   if(password==null || password.length<6 || password.isEmpty){
+      //     return 'Password  length should greater than 6/ should not be null';
+      //   } else  {
+      //     return null;
+      //   }
+      // },
+      // textInputAction: TextInputAction.done,
     ),
     ),
     Padding

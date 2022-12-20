@@ -2,8 +2,20 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(MaterialApp(home: Checkbox_demo(),));
 }
+class Demo_Chekbox extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+   return MaterialApp(
+     home: Scaffold(
+       appBar: AppBar(title: Text("Checkbox")),
+     ),
+   );
+  }
+
+}
 
 class Checkbox_demo extends StatefulWidget{
+
 
 
   @override
@@ -11,24 +23,23 @@ class Checkbox_demo extends StatefulWidget{
 }
 
 class _Checkbox_demoState extends State<Checkbox_demo> {
+
   bool ischeck=false;
   @override
   Widget build(BuildContext context) {
    return Center(
-     child: Column(
-       children: [
-         SizedBox(height: 50,),
-         Checkbox(value: ischeck,
-             onChanged: (bool? value)
+     child: Checkbox(
+             checkColor:Colors.white,
+             value: ischeck,
+             onChanged: (bool ? value)
          {
            setState(() {
              ischeck= value!;
            });
          }),
          // Text("Female")
-       ],
 
-     ),
-   );
+
+     );
   }
 }

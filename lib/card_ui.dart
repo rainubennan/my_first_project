@@ -1,143 +1,57 @@
 import 'package:flutter/material.dart';
-  void main(){
-    runApp(MaterialApp(home: Card_Row(),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch:Colors.brown),));
-  }
-  class Card_Row extends StatefulWidget {
+void main(){
+  runApp(MaterialApp(home: Card_Ui(),));
+}
+
+class Card_Ui extends StatelessWidget {
   @override
-  State<Card_Row> createState() => _Card_RowState();
-}
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(" Card UI")),
 
-class _Card_RowState extends State<Card_Row> {
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold (
-        body: Column(
-        children:[
-          Row(
-        children:const [
-          Icon(Icons.home,color: Colors.deepOrange),
-          Text(("Heart Shaker"),
-          ),
-        ],),
-      Row(
-      children:const [
-      Icon(Icons.airplane_ticket,color: Colors.deepOrange),
-      Text(("Heart Shaker"),
+          body: GridView(
+    gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 3,
+    crossAxisSpacing:5,
+    mainAxisSpacing: 10,
+    ),
+    children: [
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      // child: SizedBox(height: 25,width: 75,
+          child: Container(height:25,width:75,color: Colors.purple,child: Icon(Icons.home,color: Colors.purpleAccent,),)),
+    // ),
+      const Padding(
+        padding: EdgeInsets.all(8.0),
+            child: SizedBox(height: 25,width: 75,
+            child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.shield,color: Colors.purpleAccent,),)),
       ),
-      ],),
-          Row(
-            children:const [
-              Icon(Icons.phone_android,color: Colors.brown),
-              Text(("Heart Shaker"),
-              ),
-            ],),
-          Row(
-            children:const [
-              Icon(Icons.phone_android,color: Colors.brown),
-              Text(("Heart Shaker"),
-              ),
-            ],),
-          Row(
-            children:const [
-              Icon(Icons.phone_android,color: Colors.brown),
-              Text(("Heart Shaker"),
-              ),
-            ],),
-          Row(
-            children:const [
-              Icon(Icons.phone_android,color: Colors.brown),
-              Text(("Heart Shaker"),
-              ),
-            ],),
-      //     ListTile(
-      //       leading: Icon(Icons.home, size: 20,c),
-      //       title: Text("Heart Shaker",
-      //         style: TextStyle(fontSize: 15, color: Colors.red),),
-      //     ),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.notification_important_outlined, size: 20),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15, backgroundColor: Colors.indigo),),
-      //       ),),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.linked_camera, size: 20),
-      //         title: Text("Heart Shaker",
-      //           style: TextStyle(fontSize: 15, backgroundColor: Colors.green),),
-      //       ),),
-      //       Card(
-      // child:ListTile(
-      //         leading: Icon(Icons.star_border_outlined, size: 20),
-      //         title: Text("Heart Shaker",
-      //           style: TextStyle(fontSize: 15, backgroundColor: Colors.amber),),
-      //       ),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.wifi_off_outlined, size: 20),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15, backgroundColor: Colors.deepOrangeAccent),),
-      //       ),),
-      //       Card(
-      //       child:
-      //       ListTile(
-      //         leading: Icon(Icons.phone, size: 20),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15, backgroundColor: Colors.yellow),),
-      //       ),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.message, size: 20,color: Colors.white12),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15, color: Colors.white12),),
-      //       ),),
-      //       Card(
-      //       child:
-      //       ListTile(
-      //         leading: Icon(Icons.volume_mute, size: 20,color: Colors.brown,),
-      //         title: Text("Heart Shaker",
-      //           style: TextStyle(fontSize: 15, color: Colors.brown),),
-      //       ),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.stream, size: 20,color: Colors.greenAccent,),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15, color: Colors.greenAccent),),
-      //       ),),
-      //       Card(
-      // child:
-      //       ListTile(
-      //         leading: Icon(Icons.audiotrack_sharp, size: 20,color: Colors.purpleAccent),
-      //         title: Text("Heart Shaker", style: TextStyle(
-      //             fontSize: 15,color: Colors.purpleAccent),),
-      //     ),
-      //   ),
-      //   Card(
-      //     child: ListTile(
-      //       leading: Icon(Icons.window_sharp, size: 20,color: Colors.teal),
-      //       title: Text(
-      //         "Heart Shaker",
-      //         style: TextStyle(fontSize: 15, color: Colors.teal),
-      //       ),
-      //     ),
-      //   ),
-      //   Card(
-      //     child: ListTile(
-      //       leading: Icon(Icons.plumbing_sharp, size: 20,color: Colors.cyan,),
-      //       title: Text(
-      //         "Heart Shaker",
-      //         style: TextStyle(fontSize: 15, color: Colors.cyan),
-      //       ),
-      //     ),
-      //   ),
-
-    ],),);
-  }
-}
+      const Padding(
+        padding: EdgeInsets.all(8.0),
+    child: SizedBox(height: 25,width: 75,
+        child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.language,color: Colors.purpleAccent,),)),
+      ),
+      Padding(
+        padding: EdgeInsets.all(8.0),
+    child: SizedBox(height: 25,width: 75,
+        child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.one_x_mobiledata,color: Colors.purpleAccent,),)),
+      ),
+      Padding(
+        padding: EdgeInsets.all(8.0),
+    child: SizedBox(height: 25,width: 75,
+        child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.palette_outlined,color: Colors.purpleAccent,),)),
+      ),
+      const Padding(
+        padding: EdgeInsets.all(8.0),
+    child: SizedBox(height: 25,width: 75,
+        child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.home,color: Colors.purpleAccent,),)),
+      ),
+      Padding(
+        padding: EdgeInsets.all(8.0),
+    child: SizedBox(height: 25,width: 75,
+        child: Card(color: Colors.purple,elevation:10,child: Icon(Icons.home,color: Colors.purpleAccent,),)),
+      ),
+    ],
+    ),);
+    }
+    }

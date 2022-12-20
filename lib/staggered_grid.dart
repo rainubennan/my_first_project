@@ -19,14 +19,14 @@ class StaggeredGriddd extends StatelessWidget{
     StaggeredTile.count(2,3),
   ];
 final List<Widget> _listTile= <Widget>[
-  Background_Tile(backgroundColor:Colors.blue,icondata: Icons.ac_unit_outlined),
-  Background_Tile(backgroundColor:Colors.red,icondata: Icons.safety_check_outlined),
-  Background_Tile(backgroundColor:Colors.green,icondata: Icons.bolt),
-  Background_Tile(backgroundColor:Colors.purple,icondata: Icons.accessibility),
-  Background_Tile(backgroundColor:Colors.brown,icondata: Icons.account_balance),
-  Background_Tile(backgroundColor:Colors.indigo,icondata: Icons.add_circle),
-  Background_Tile(backgroundColor:Colors.yellow,icondata: Icons.add_alarm_sharp),
-  Background_Tile(backgroundColor:Colors.blueGrey,icondata: Icons.add_chart),
+  Background_Tile(backgroundColor:Colors.blue,text:'hello'),
+  Background_Tile(backgroundColor:Colors.red,text:'hello'),
+  Background_Tile(backgroundColor:Colors.green,text:'hello'),
+  Background_Tile(backgroundColor:Colors.purple,text:'hello'),
+  Background_Tile(backgroundColor:Colors.brown,text:'hello'),
+  Background_Tile(backgroundColor:Colors.indigo,text:'hello'),
+  Background_Tile(backgroundColor:Colors.yellow,text:'hello'),
+  Background_Tile(backgroundColor:Colors.blueGrey,text:'hello'),
 ];
 
 
@@ -47,15 +47,16 @@ final List<Widget> _listTile= <Widget>[
 }
 class  Background_Tile extends StatelessWidget{
   final Color?  backgroundColor;
-  final IconData icondata;
+  // final IconData icondata;
+  final text;
   Background_Tile({
-    this.backgroundColor,required this.icondata
+    this.backgroundColor,this.text
 });
   @override
   Widget build(BuildContext context) {
     return Card(
       color: backgroundColor,
-      child: Icon(icondata, color: Colors.white),
+      child: Text(text),
     );
   }
 }

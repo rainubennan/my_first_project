@@ -13,11 +13,11 @@ class GridNormal extends StatelessWidget {
       body: GridView(
         gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          crossAxisSpacing:6,
+          mainAxisSpacing:12,
         ),
         children: [
-          Container(color: Colors.purple,),
+          Container(width:20,height:7,color: Colors.purple[200],child: Icon(Icons.flash_on,color: Colors.white,),),
           Container(color: Colors.red,),
           Container(color: Colors.green,),
           Container(color: Colors.yellow,),

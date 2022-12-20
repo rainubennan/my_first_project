@@ -77,6 +77,7 @@ class Contact_list extends StatelessWidget {
                     "https://media.istockphoto.com/vectors/phone-contact-icon-in-flat-style-isolated-vector-illustration-symbol-vector-id1210969239?k=20&m=1210969239&s=170667a&w=0&h=_oA8Msw-8uLby1vuKxNPCEJoHeqM-01o8VkrJtoHzXA="),
               ),
             ),
+
     // ),
           // Card(
           //   child:
