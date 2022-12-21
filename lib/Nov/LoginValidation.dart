@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'list.dart';
+
 void main() {
   runApp(MaterialApp(
     home: Log_Validation(),
@@ -71,8 +73,10 @@ class _Log_ValidationState extends State<Log_Validation> {
               padding: const EdgeInsets.all(15.0),
               child: ElevatedButton(onPressed: () {final valid =formkey.currentState!.validate();
                 if(valid){
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => List()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => L_ist()));
+                }else{
+                  return null;
                 }
                 },
                   child: Text("Login")),
