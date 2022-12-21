@@ -16,6 +16,7 @@ class Log_Validation extends StatefulWidget {
 
 class _Log_ValidationState extends State<Log_Validation> {
   var formkey = GlobalKey<FormState>();
+  bool viewenable=true;
 
   @override
   Widget build(BuildContext context) {
@@ -53,10 +54,23 @@ class _Log_ValidationState extends State<Log_Validation> {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: TextFormField(
+                obscureText: viewenable,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     label: Text("Password"),
                     hintText: "Enter your password",
-                    suffixIcon: Icon(Icons.visibility_off_outlined),
+                    prefixIcon: Icon(Icons.password),
+                    suffixIcon:IconButton(
+                    onPressed:() {
+              setState(() {
+              if (viewenable) {
+              viewenable = false;
+              } else {
+              viewenable = true;
+              }
+              });
+              },
+                  icon: Icon(viewenable== true? Icons.visibility_off: Icons.visibility)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8))),
                 textInputAction: TextInputAction.done,
