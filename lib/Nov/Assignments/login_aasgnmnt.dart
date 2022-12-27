@@ -16,7 +16,7 @@ class Log_Inn extends StatelessWidget{
         Text("Welcome back! Login with your credentials",style: TextStyle(fontSize:15),),
 
 Padding(
-  padding: const EdgeInsets.only(right:550,bottom: 5,top: 25),
+  padding: const EdgeInsets.only(right:300,bottom: 5,top: 25),
   child:   Text("Email",),
 ),
           Padding(
@@ -32,7 +32,7 @@ Padding(
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right:540,bottom: 5,top:10),
+            padding: const EdgeInsets.only(right:300,bottom: 5,top:10),
             child:   Text("Password",),
           ),
           Padding(
