@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_project/Nov/Assignments/Sign_upp.dart';
+import 'package:my_first_project/Nov/Assignments/login_aasgnmnt.dart';
 import 'package:my_first_project/login_with_validation.dart';
 import 'package:my_first_project/registerpage.dart';
 
@@ -36,7 +38,7 @@ class MainScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: ()
                 {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Loginvalidation() ));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>Log_Inn() ));
                 },
                 child: Text("Login"),
               ),
@@ -44,7 +46,7 @@ class MainScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20, bottom: 10),
               child: ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Registeration() ));},
+                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_Upp() ));},
                 child: Text("Sign Up"),
               ),
             ),
