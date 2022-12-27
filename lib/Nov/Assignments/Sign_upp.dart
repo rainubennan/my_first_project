@@ -44,8 +44,8 @@ class Sign_Upp extends StatelessWidget{
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right:300,bottom: 5,top:10),
-                child:   Text("Confirm Password",),
+                padding: const EdgeInsets.only(right:250,bottom: 5,top:10),
+                child:Text("Confirm Password",),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
