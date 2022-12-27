@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'Sign_upp.dart';
 void main(){
   runApp(MaterialApp(home: Log_Inn(),debugShowCheckedModeBanner: false,));
 }
@@ -48,7 +50,9 @@ Padding(
             ),
           ),
           ElevatedButton(onPressed: (){}, child: Text("Login")),
-          TextButton(onPressed: (){}, child: Text("Dont have an account? Sign Up")),
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_Upp() ));
+          }, child: Text("Dont have an account? Sign Up")),
         ]
       ),
     ),
