@@ -47,7 +47,8 @@ Padding(
 
             ),
           ),
-          ElevatedButton(onPressed: (){}, child: Text("Login"))
+          ElevatedButton(onPressed: (){}, child: Text("Login")),
+          TextButton(onPressed: (){}, child: Text("Dont have an account? Sign Up")),
         ]
       ),
     ),
