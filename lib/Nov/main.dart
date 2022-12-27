@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:my_first_project/mainscreen.dart';
+
+
+import 'LoginValidation.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -21,7 +23,7 @@ class _Splashscrn1State extends State<Splashscrn1> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds:3), () {
-      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainScreen() ));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Log_Validation() ));
     });
   }
   @override
